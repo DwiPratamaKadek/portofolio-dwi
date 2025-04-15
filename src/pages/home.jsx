@@ -52,7 +52,7 @@ export default function Home(){
                         <motion.p style={{x, opacity}}  
                             className="font-light w-max-[800px] ml-4 mt-2 mr-2 text-max-[20px]">{aboutME}</motion.p>
                         <motion.div style={{x, opacity}} 
-                            className=" flex ml-4 gap-1.5 mt-2">
+                            className="flex ml-4 gap-1.5 mt-2">
                             <Box><DynamicLink href="https://www.instagram.com/ka.dwip/" target="_blank"> ka.dwip</DynamicLink></Box>
                             <Box><DynamicLink href="https://mail.google.com/mail/?view=cm&to=dwipratamaikadek@gmail.com&su=Judul&body=Pesan" target="_blank">dwipratamaikadek@gmail.com</DynamicLink></Box>
                             <Box><DynamicLink href="https://github.com/DwiPratamaKadek" target="_blank">dwi_kadek</DynamicLink></Box>
@@ -135,17 +135,23 @@ function Learning (){
             alt : 'gambar ci',
             
         },
+        {
+            src :'/image/mysql.png',
+            alt : 'mysql',  
+        },
     ]
     const img = [
         {
-            src : '/image/figma.png',
-            alt : 'gambar fimga',
-            
+            src :'/image/flutter.png',
+            alt : 'flutter',  
         },
         {
-            src :'/image/js.png',
-            alt : 'gambar javascript',  
-            
+            src :'/image/python.png',
+            alt : 'flutter',  
+        },
+        {
+            src :'/image/laravel.png',
+            alt : 'flutter',  
         },
     ]
 
@@ -219,19 +225,6 @@ function Project () {
             text: "Lihat Demo",
         },
     }
-
-     const project2 = {
-        images: [
-        { src: "/image/catatan-belanja.png", alt: "Project 1" },
-        ],
-        title: "Note Shop App",
-        description: "Aplikasi e-commerce untuk catatan digital.",
-        tags: ["React.js", "JavaScript", "Tailwind CSS"],
-        link: {
-            href: "https://note-shop.vercel.app/",
-            text: "Lihat Demo",
-        },
-    }
     return(
         <motion.div style={{opacity, scale}} ref={ref} id="project">
             <div className="flex faljustify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
@@ -240,7 +233,6 @@ function Project () {
         </div>
         <div>
             <ProjectShowCase {...project1}> </ProjectShowCase>
-            <ProjectShowCase {...project2}> </ProjectShowCase>
         </div>
 
             {/* <div className="w-full px-4 font-sans grid place-content-center mb-10 ">

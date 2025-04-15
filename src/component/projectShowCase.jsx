@@ -32,10 +32,10 @@ return (
                         ))}
                     </div>
                     {/* Untuk Deskripsi */}
-                    <div className="w-[50%]">
+                    <div className="w-[70%]">
                         <h1 className="text-2xl font-bold font-sans">{title}</h1>
                         <p>{description}</p>
-                        <div className="flex gap-1.5 mt-2 ">
+                        <div className="gap-1.5 mt-2 ">
                         {tags.map((tag, index)=>(
                             <Box key={index} className="text-sm" >{tag}</Box>
                         ))}
