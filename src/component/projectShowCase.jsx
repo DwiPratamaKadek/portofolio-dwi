@@ -16,16 +16,18 @@ export default function ProjectShowCase ({
 return (
     <div className="w-full px-4 font-sans grid place-content-center mb-10 ">
                 <div className=" flex flex-col md:flex-row justify-center gap-20 md:gap-56 ">
-                    <div className="w-full md:w-[35%] lg:w-[40%] w-max-[300px] ">
+                    <div className="
+                    w-[100vm]
+                    max-w-[350px]
+                    md:w-[50%] 
+                    lg:max-w-[500px] 
+                     ">
                         {images.map((img, index) => (
                             <ImageBox 
                                 key={index}
                                 src={img.src}
                                 alt={img.alt}
-                                width="400px"
-                                height="200px"
                                 className=" border-0 p-2 w-full h-auto object-contain inset-shadow-sm"
-                                style = {{width : '100%', height: '100%'}}
                             />
                         ))}
                     </div>

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 export default function Navbar(){
     return (
-        <nav className="bg-white/20 backdrop-blur-sm fixed top-0 w-full ">
-            <div className="h-24 flex justify-around items-center">
+        <nav className="bg-white/20 backdrop-blur-sm fixed top-0 w-full z-50 ">
+            <div className="h-20 sm:h-24 md:  flex justify-around items-center">
                 <ul className="list-none flex items-center">
                     <li className="pr-4 font-sans text-xl font-medium "><Link to ="/">Dwi Pratama</Link></li>
                 </ul>

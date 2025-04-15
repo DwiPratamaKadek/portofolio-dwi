@@ -42,17 +42,23 @@ export default function Home(){
     
     return (
         <>
-            <div className="h-screen w-full bg-[url('/image/Group2.png')] bg-cover">  
-                <div className='font-sans grid place-content-center'>
-                    <motion.h1 style={{x, opacity}}  className='font-semibold mt-[200px] ml-4 text-[64px] leading-tight'>Hello,</motion.h1>
-                    <motion.h1 style={{x, opacity}}  className='font-semibold  text-[200px] leading-none'>{name}</motion.h1>
-                    <motion.p style={{x, opacity}}  className="font-light w-[809px] ml-4  ">{aboutME}</motion.p>
-                    <motion.div style={{x, opacity}} className=" flex ml-4 gap-1.5 mt-2">
-                        <Box><DynamicLink href="https://www.instagram.com/ka.dwip/" target="_blank"> ka.dwip</DynamicLink></Box>
-                        <Box><DynamicLink href="https://mail.google.com/mail/?view=cm&to=dwipratamaikadek@gmail.com&su=Judul&body=Pesan" target="_blank">dwipratamaikadek@gmail.com</DynamicLink></Box>
-                        <Box><DynamicLink href="https://github.com/DwiPratamaKadek" target="_blank">dwi_kadek</DynamicLink></Box>
-                    </motion.div>
-                    <motion.div style={{x, opacity}} className="ml-4"><Button/></motion.div>
+            <div className="h-screen w-full bg-[url('/image/Group2.png')] bg-cover bg-no-repeat">  
+                <div className='container mx-auto px-4 h-full flex items-center justify-center'>
+                    <div className="font-sans w-full max-w-4xl">
+                        <motion.h1 style={{x, opacity}}
+                            className='font-semibold mt-[200px] ml-4 text-4xl leading-tight sm:text-3xl md:text-4xl '>Hello,</motion.h1>
+                        <motion.h1 style={{x, opacity}} 
+                            className='font-semibold text-8xl ml-3 sm:text-6xl md:text-8xl lg:text-[120px] xl:text-[200px] '>{name}</motion.h1>
+                        <motion.p style={{x, opacity}}  
+                            className="font-light w-max-[800px] ml-4 mt-2 mr-2 text-max-[20px]">{aboutME}</motion.p>
+                        <motion.div style={{x, opacity}} 
+                            className=" flex ml-4 gap-1.5 mt-2">
+                            <Box><DynamicLink href="https://www.instagram.com/ka.dwip/" target="_blank"> ka.dwip</DynamicLink></Box>
+                            <Box><DynamicLink href="https://mail.google.com/mail/?view=cm&to=dwipratamaikadek@gmail.com&su=Judul&body=Pesan" target="_blank">dwipratamaikadek@gmail.com</DynamicLink></Box>
+                            <Box><DynamicLink href="https://github.com/DwiPratamaKadek" target="_blank">dwi_kadek</DynamicLink></Box>
+                        </motion.div>
+                        <motion.div style={{x, opacity}} className="ml-4"><Button/></motion.div>
+                    </div>
                 </div>
             </div>
             <div className='grid place-content-center'>
@@ -86,9 +92,19 @@ export default function Home(){
         const aboutME = "i’m a front - end developer currently diving deep into React and UI/UX design. Enjoys turning code int interactive and visually appealing interfaces while continuously learning modern concepts like components, state management, and user friendly design principles, Committed to growing through challenges, refining skills, and contributing to better digital experiences.  "
 
         return (
-            <motion.div style={{opacity, scale}} ref={ref} className="border-t border-gray-300 my-64 mx-16">
-                <h1 className="text-[48px] mb-14 font-bold mt-32"> About Me </h1>
-                <p className="w-[645px] font-light">{aboutME}</p>
+            <motion.div 
+                style={{ opacity, scale }} 
+                ref={ref} 
+                className="border-t border-gray-300 my-20 md:my-32 lg:my-64 mx-4 md:mx-8 lg:mx-16"
+            >
+                <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] mb-8 md:mb-12 lg:mb-14 font-bold mt-12 md:mt-20 lg:mt-32">
+                    About Me
+                </h1>
+                <p className="font-light max-w-[645px] text-base md:text-lg leading-relaxed">
+                    {aboutME}
+                </p>
+                </div>
             </motion.div>
     )
 }
@@ -147,8 +163,8 @@ function Learning (){
         <motion.div style={{opacity,scale}} ref={ref} className="flex flex-col items-center">
             <div className="border-t border-gray-300 w-full max-w-[900px]"></div>
             <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Teach Me </h1>
-            <div className="w-full max-w-[900px] px-4">
-                <div className="flex justify-center-safe ">
+            <div className="w-full max-w-[900px] px-4 mx-auto">
+                <div className="flex flex-wrap justify-center-safe gap-2">
                 {images.map((img, index) => (
                     <ImageBox 
                     key={index}
@@ -156,14 +172,14 @@ function Learning (){
                     alt={img.alt}
                     width="100px"
                     height="100px"
-                    className="border-2 p-3"
+                    className=" border-2 p-3"
                     />
                 ))}
                 </div>
             </div>
                 <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Steal Learning </h1>
-                <div className="w-full max-w-[900px] px-4">
-                <div className="flex justify-center">
+                <div className="w-full max-w-[900px] px-4 mx-auto">
+                <div className="flex flex-wrap justify-center-safe gap-2">
                 {img.map((img, index) => (
                     <ImageBox 
                     key={index}
@@ -218,7 +234,7 @@ function Project () {
     }
     return(
         <motion.div style={{opacity, scale}} ref={ref} id="project">
-            <div className="flex justify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
+            <div className="flex faljustify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
             <div className="w-full max-w-[900px] px-4 font-sans grid place-content-center">
             <h1 className="text-[40px] mb-20 font-semibold mt-32"> Project </h1>
         </div>
