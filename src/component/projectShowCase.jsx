@@ -18,7 +18,7 @@ return (
                 <div className=" flex flex-col md:flex-row justify-center gap-20 md:gap-56 ">
                     <div className="
                     w-[100vm]
-                    max-w-[350px]
+                    max-w-[300px]
                     md:w-[50%] 
                     lg:max-w-[500px] 
                      ">
