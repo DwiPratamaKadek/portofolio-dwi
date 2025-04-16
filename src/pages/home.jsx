@@ -1,13 +1,16 @@
 import { useEffect, useRef } from "react";
 import Button from "../component/button"
-import { Link, useLocation } from "react-router-dom";
+import { href, Link, useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
 import ImageBox from "../component/imageBox";
-import { div, image } from "framer-motion/client";
+import { div, image, label } from "framer-motion/client";
 import Box from "../component/box";
 import DynamicLink from "../component/dynamicLink";
 import ProjectShowCase from "../component/projectShowCase";
 import Footer from "../component/footer";
+import Dropdwon from "../component/dropdown";
+
+import { FaInstagram, FaEnvelope, FaGithub, FaChevronDown } from "react-icons/fa";
 
 
 
@@ -15,6 +18,12 @@ export default function Home(){
     const name = "I'M Dwi."
     const aboutME = "i’m a front - end developer currently diving deep into React and UI/UX design. Enjoys turning code int interactive and visually appealing interfaces while continuously learning modern concepts like components, state management, and user friendly design principles, Committed to growing through challenges, refining skills, and contributing to better digital experiences.  "
     const location = useLocation();
+    const dropdwonItems = [
+        {label: "ka.dwip", href : "https://www.instagram.com/ka.dwip/",icon:<FaInstagram />,  onclick: () => console.log('its chacked')},
+        {label: "dwipratamaikadek@gmail.com", href : "https://mail.google.com/mail/?view=cm&to=dwipratamaikadek@gmail.com&su=Judul&body=Pesan",icon:<FaEnvelope />,  onclick: () => console.log('its chacked')},
+        {label: "dwi_kadek", href : "https://github.com/DwiPratamaKadek",icon:<FaGithub /> ,onclick: () => console.log('its chacked')}
+
+    ]
    
     // // untuk membuat animasi awal
     const mountProgress = useMotionValue(0)
@@ -52,12 +61,14 @@ export default function Home(){
                         <motion.p style={{x, opacity}}  
                             className="font-light w-max-[800px] ml-4 mt-2 mr-2 text-max-[20px]">{aboutME}</motion.p>
                         <motion.div style={{x, opacity}} 
-                            className="flex ml-4 gap-1.5 mt-2">
-                            <Box><DynamicLink href="https://www.instagram.com/ka.dwip/" target="_blank"> ka.dwip</DynamicLink></Box>
+                            className="flex flex-row ml-4 gap-1.5 mt-4">
+                                <Dropdwon buttonText="Contact Me" items={dropdwonItems} target="_blank"></Dropdwon>
+                                <div className="ml-4"><Button></Button></div>
+                            {/* <Box><DynamicLink href="https://www.instagram.com/ka.dwip/" target="_blank"> ka.dwip</DynamicLink></Box>
                             <Box><DynamicLink href="https://mail.google.com/mail/?view=cm&to=dwipratamaikadek@gmail.com&su=Judul&body=Pesan" target="_blank">dwipratamaikadek@gmail.com</DynamicLink></Box>
-                            <Box><DynamicLink href="https://github.com/DwiPratamaKadek" target="_blank">dwi_kadek</DynamicLink></Box>
+                            <Box><DynamicLink href="https://github.com/DwiPratamaKadek" target="_blank">dwi_kadek</DynamicLink></Box> */}
                         </motion.div>
-                        <motion.div style={{x, opacity}} className="ml-4"><Button/></motion.div>
+                        
                     </div>
                 </div>
             </div>
@@ -169,7 +180,7 @@ function Learning (){
         <motion.div style={{opacity,scale}} ref={ref} className="flex flex-col items-center">
             <div className="border-t border-gray-300 w-full max-w-[900px]"></div>
             <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Teach Me </h1>
-            <div className="w-full max-w-[900px] px-4 mx-auto">
+            <div className="w-full max-w-[9 00px] px-4 mx-auto">
                 <div className="flex flex-wrap justify-center-safe gap-2">
                 {images.map((img, index) => (
                     <ImageBox 
