@@ -180,7 +180,7 @@ function Learning (){
         <motion.div style={{opacity,scale}} ref={ref} className="flex flex-col items-center">
             <div className="border-t border-gray-300 w-full max-w-[900px]"></div>
             <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Teach Me </h1>
-            <div className="w-full max-w-[9 00px] px-4 mx-auto">
+            <div className="w-full max-w-[900px] px-4 mx-auto">
                 <div className="flex flex-wrap justify-center-safe gap-2">
                 {images.map((img, index) => (
                     <ImageBox 
@@ -236,14 +236,28 @@ function Project () {
             text: "Lihat Demo",
         },
     }
+
+    const project2 = {
+        images: [
+        { src: "/image/jendela-wisata.png", alt: "Project 2" },
+        ],
+        title: "Jendela Wisata ",
+        description: "Jendela Wisata bertujuan untuk menyajikan informasi lengkap tentang destinasi wisata dari berbagai daerash di bali, mulai dari tempat wisata alam, sejarah, budaya, hingga wisata kuliner. Pengguna dapat menelusuri berbagai destinasi wisata berdasarkan kategori, lokasi, atau aktivitas yang diminati.",
+        tags: ["CI", "JavaScript", "CSS", "PHP"],
+        link: {
+            href: "https://pariwisata.lab-trpl.id/",
+            text: "Lihat Demo",
+        },
+    }
     return(
         <motion.div style={{opacity, scale}} ref={ref} id="project">
-            <div className="flex faljustify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
+            <div className="flex justify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
             <div className="w-full max-w-[900px] px-4 font-sans grid place-content-center">
-            <h1 className="text-[40px] mb-20 font-semibold mt-32"> Project </h1>
-        </div>
-        <div>
+                <h1 className="text-[40px] mb-20 font-semibold mt-32"> Project </h1>
+            </div>
+        <div>   
             <ProjectShowCase {...project1}> </ProjectShowCase>
+            <ProjectShowCase {...project2}> </ProjectShowCase>
         </div>
 
             {/* <div className="w-full px-4 font-sans grid place-content-center mb-10 ">
