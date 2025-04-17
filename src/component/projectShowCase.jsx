@@ -15,8 +15,9 @@ export default function ProjectShowCase ({
 {
 return (
     <div className="w-full px-4 font-sans grid place-content-center mb-10 ">
-                <div className=" flex flex-col md:flex-row justify-center gap-20 md:gap-32 w-[900px]">
+                <div className=" flex flex-col md:flex-row justify-center gap-20 md:gap-32 max-w-[900px]">
                     <div className="
+                    ml-5    
                     w-[100vm]
                     max-w-[300px]
                     md:w-[50%] 
@@ -32,7 +33,7 @@ return (
                         ))}
                     </div>
                     {/* Untuk Deskripsi */}
-                    <div className="w-[50%]">
+                    <div className="ml-10 sm:w-[40%]">
                         <h1 className="text-2xl font-bold font-sans">{title}</h1>
                         <p>{description}</p>
                         <div className="flex gap-1.5 mt-2 ">
