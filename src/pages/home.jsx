@@ -150,8 +150,6 @@ function Learning (){
             src :'/image/mysql.png',
             alt : 'mysql',  
         },
-    ]
-    const img = [
         {
             src :'/image/flutter.png',
             alt : 'flutter',  
@@ -179,32 +177,17 @@ function Learning (){
     return(
         <motion.div style={{opacity,scale}} ref={ref} className="flex flex-col items-center">
             <div className="border-t border-gray-300 w-full max-w-[900px]"></div>
-            <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Teach Me </h1>
-            <div className="w-full max-w-[900px] px-4 mx-auto">
+            <h1 className="text-[40px] mb-20 font-semibold mt-32 "> What i Learned </h1>
+            <div className="w-full max-w-[500px] px-4 mx-auto">
                 <div className="flex flex-wrap justify-center-safe gap-2">
                 {images.map((img, index) => (
                     <ImageBox 
                     key={index}
                     src={img.src}
                     alt={img.alt}
-                    width="100px"
-                    height="100px"
+                    width="75px"
+                    height="75px"
                     className=" border-2 p-3"
-                    />
-                ))}
-                </div>
-            </div>
-                <h1 className="text-[40px] mb-20 font-semibold mt-32 "> Steal Learning </h1>
-                <div className="w-full max-w-[900px] px-4 mx-auto">
-                <div className="flex flex-wrap justify-center-safe gap-2">
-                {img.map((img, index) => (
-                    <ImageBox 
-                    key={index}
-                    src={img.src}
-                    alt={img.alt}
-                    width="100px"
-                    height="100px"
-                    className="border-2 p-3"
                     />
                 ))}
                 </div>
@@ -252,7 +235,7 @@ function Project () {
     return(
         <motion.div style={{opacity, scale}} ref={ref} id="project">
             <div className="flex justify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
-            <div className="w-full max-w-[900px] px-4 font-sans grid place-content-center">
+            <div className="w-full px-4 font-sans grid place-content-center">
                 <h1 className="text-[40px] mb-20 font-semibold mt-32"> Project </h1>
             </div>
         <div>   

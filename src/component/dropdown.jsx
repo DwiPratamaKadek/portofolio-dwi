@@ -21,7 +21,17 @@ export default function Dropdwon({buttonText, items, target="_self", rel= ''}) {
         <div className="relative" ref={dropdownRef}>
         <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-white text-black px-4 py-2 rounded-md flex items-center shadow-lg inset-shadow-sm transition-transform hover:scale-[1.05]"
+            className="bg-white 
+            text-black 
+            px-4 py-2 
+            rounded-md 
+            flex 
+            items-center 
+            shadow-lg 
+            inset-shadow-sm 
+            transition-transform 
+            hover:scale-[1.05] 
+            hover:bg-gray-100"
         >
             {buttonText}
             <svg
