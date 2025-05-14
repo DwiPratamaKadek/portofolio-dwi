@@ -232,6 +232,19 @@ function Project () {
             text: "Lihat Demo",
         },
     }
+
+    const project3 = {
+        images: [
+        { src: "/image/weather-map.png", alt: "Project 3" },
+        ],
+        title: "Cuaca Indo ",
+        description: "Weather Map adalah aplikasi web sederhana yang digunakan untuk mengetahui kondisi cuaca terkini di berbagai wilayah di Indonesia secara praktis dan cepat.",
+        tags: ["React", "TypeScript", "Tailwindcss", "openAPI", "Vite"],
+        link: {
+            href: "https://weather-map-psi.vercel.app/",
+            text: "Lihat Demo",
+        },
+    }
     return(
         <motion.div style={{opacity, scale}} ref={ref} id="project">
             <div className="flex justify-center mt-48"><div className="border-t border-gray-300 w-full max-w-[900px] "></div></div>
@@ -241,6 +254,7 @@ function Project () {
         <div>   
             <ProjectShowCase {...project1}> </ProjectShowCase>
             <ProjectShowCase {...project2}> </ProjectShowCase>
+            <ProjectShowCase {...project3}> </ProjectShowCase>
         </div>
 
             {/* <div className="w-full px-4 font-sans grid place-content-center mb-10 ">
