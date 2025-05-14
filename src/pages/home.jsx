@@ -1,16 +1,12 @@
 import { useEffect, useRef } from "react";
 import Button from "../component/button"
-import { href, Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
 import ImageBox from "../component/imageBox";
-import { div, image, label } from "framer-motion/client";
-import Box from "../component/box";
-import DynamicLink from "../component/dynamicLink";
 import ProjectShowCase from "../component/projectShowCase";
 import Footer from "../component/footer";
 import Dropdwon from "../component/dropdown";
-
-import { FaInstagram, FaEnvelope, FaGithub, FaChevronDown } from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaGithub } from "react-icons/fa";
 
 
 

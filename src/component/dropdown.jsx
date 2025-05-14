@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect} from "react";
-import { Transit    ion } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 
 
 export default function Dropdwon({buttonText, items, target="_self", rel= ''}) {
